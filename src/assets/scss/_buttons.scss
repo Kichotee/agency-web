@@ -1,0 +1,32 @@
+%btn{
+    display: inline-block;
+    border-radius:5px;
+    padding: 0.5rem 1.25rem;
+    margin: 3px;
+    transition: all 0.5s;
+   
+
+   
+    &:hover{
+        transform: scale(.75);
+    }
+
+} 
+
+
+.btn-primary{
+    @extend %btn;
+   @include set-background(lighten( #343434, 10%));
+
+   
+} 
+.btn-secondary{
+    @extend %btn;
+    background-color: $secondary-color;
+    color: #343434;
+    &:hover{
+        color: #444
+    }
+
+
+}

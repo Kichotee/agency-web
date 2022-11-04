@@ -1,0 +1,42 @@
+$light-color: #f4f4f4;
+$primary-color: #0e6cff;
+// $primary-color: #e0ffff;
+$text-color:#343434;
+$text-color-white:#f4f4f4;
+
+
+$secondary-color:#ff8700;
+$bg-color:#f8f8f8;
+
+
+$bg-gradient: linear-gradient(167deg, rgba(52,52,52,1) 0%, rgba(27,18,18,1) 48%, rgba(27,18,18,1) 81%, rgba(27,18,18,1) 100%);
+$font-stack: Arial,
+helvetica;
+
+
+@function set-text-color($color){
+    @if(lightness($color)>70){
+        @return #333;
+    }
+    @else{
+        @return #fff;
+    }
+
+}
+
+@mixin set-background($color){
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+
+$spaceamounts: (1,2,3,4,5);
+
+@each $space in $spaceamounts{
+    .m-#{$space}{ 
+        margin: #{$space}rem;
+    }
+    .my-#{$space}{
+        margin: #{$space}rem 0;
+    }
+}
