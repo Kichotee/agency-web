@@ -97,13 +97,14 @@ export default {
 .offer-card-box {
     display: flex;
     width: 100%;
+    gap: 5%;
     justify-content: space-around;
 
     flex-direction: column;
     height: 90%;
 
      .btn-primary{
-        width: 40%;
+        width: 35%;
         align-self: center;
         border-radius: 15px;
         text-align: center;

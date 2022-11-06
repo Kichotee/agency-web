@@ -110,6 +110,8 @@ export default {
         }
 
         button {
+            outline: none;
+            border: none;
             padding: 8px 20px;
             margin: 1% 0 0 0;
         }
