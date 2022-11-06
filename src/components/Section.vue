@@ -1,17 +1,17 @@
 <template>
 <section class="platform">
-    <div class="container">
-      
+    <div v-if="!activeMenu" class="container">
+
         <div class="platform-content">
             <div class="platform-content-text">
                 <h2>
                     Let's bring Your Idea to Life
                 </h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laborum fugiat, animi, tempora necessitatibus nostrum libero sed voluptatum delectus nam illum? Rerum nobis quod dicta dignissimos praesentium, ducimus fugit suscipit?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laborum fugiat, animi, tempora necessitatibus nostrum libero sed voluptatum delectus nam illum? Rerum nobis quod dicta dignissimos praesentium, ducimus fugit suscipit?
                 </p>
                 <button class="btn-primary">
-                  Join us now
+                    Join us now
                 </button>
 
             </div>
@@ -28,13 +28,22 @@
 <script>
 export default {
     name: 'HelloWorld',
+    data() {
+    return {
+        activeMenu: false
+    }
 
 }
+
+,
+
+}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style lang="scss" >
+<style lang="scss">
 @import '../assets/scss/config';
 @import '../assets/scss/utilities';
 @import '../assets/scss/buttons';
@@ -42,7 +51,7 @@ export default {
 
 
 .platform {
-    height:70vh;
+    height: 70%;
     margin: 2.5% 0 2.5%;
     background: #fff;
     z-index: 2;
@@ -68,7 +77,6 @@ export default {
     text-align: center;
     width: 100%;
 
-
     &-media {
         height: 100%;
         align-self: center;
@@ -88,7 +96,7 @@ export default {
     }
 
     &-text {
-        max-width:70%;
+        max-width: 70%;
         align-self: center;
         margin: 0 0 5.5% 0;
         line-height: 1.2;
@@ -96,16 +104,18 @@ export default {
         h2 {
             font-size: 1.5rem;
         }
-        p{
-          font-size: 0.8rem;
+
+        p {
+            font-size: 0.8rem;
         }
-        button{
-           padding: 8px 20px;
-           margin: 1% 0 0 0;
+
+        button {
+            padding: 8px 20px;
+            margin: 1% 0 0 0;
         }
 
     }
 }
-@import '../assets/scss/responsiveness';
 
+@import '../assets/scss/responsiveness';
 </style>

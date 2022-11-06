@@ -1,6 +1,6 @@
 <template>
 <section class="offers">
-    <div class="container">
+    <div v v-if="!activeMenu" class="container">
         <div class="cards-box">
             <div v-for="card in offerCards" class="offer-card">
                 <div class="offer-card-box">
@@ -32,6 +32,7 @@ import {
 } from 'vue'
 export default {
     name: 'HelloWorld',
+    
     setup() {
         const store = useStore()
 
@@ -131,6 +132,8 @@ export default {
 
     }
 }
-
+.cards-box::-webkit-scrollbar{
+    width: 0;
+}
 @import '../assets/scss/responsiveness';
 </style>
